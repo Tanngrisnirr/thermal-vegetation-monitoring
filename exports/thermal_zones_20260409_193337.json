@@ -1,0 +1,348 @@
+{
+  "exported_at": "2026-04-09T17:33:37.348Z",
+  "temp_range": {
+    "min": 2.3,
+    "max": 31.7
+  },
+  "images": {
+    "2025-04-26-14-00-02-2f54c.jpg": {
+      "image": "2025-04-26-14-00-02-2f54c.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": -1,
+          "max": 31.7,
+          "v1c": 19508,
+          "v1e": 17424
+        },
+        "temp_measured": {
+          "min": 2.3,
+          "max": 31.7,
+          "rawMin": 16458,
+          "rawMax": 25674
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.3,
+        "max": 31.7,
+        "mean": 13.55,
+        "std": 4.26,
+        "included_percent": "96.6"
+      },
+      "zones": [
+        {
+          "id": "zone_1",
+          "type": "exclusion",
+          "polygon": [
+            [
+              97,
+              218
+            ],
+            [
+              102,
+              433
+            ],
+            [
+              320,
+              371
+            ],
+            [
+              302,
+              118
+            ]
+          ]
+        }
+      ],
+      "measurements": [
+        {
+          "type": "point",
+          "x": 225,
+          "y": 501,
+          "temp": 14.73849050980392
+        },
+        {
+          "type": "point",
+          "x": 361,
+          "y": 576,
+          "temp": 15.129301582887699
+        },
+        {
+          "type": "point",
+          "x": 211,
+          "y": 645,
+          "temp": 14.171353364705883
+        },
+        {
+          "type": "point",
+          "x": 320,
+          "y": 718,
+          "temp": 14.435824473320682
+        },
+        {
+          "type": "point",
+          "x": 451,
+          "y": 671,
+          "temp": 14.997041018077471
+        },
+        {
+          "type": "point",
+          "x": 496,
+          "y": 456,
+          "temp": 14.12494488632645
+        },
+        {
+          "type": "point",
+          "x": 547,
+          "y": 354,
+          "temp": 10.649904908597286
+        },
+        {
+          "type": "line",
+          "points": [
+            [
+              287,
+              801
+            ],
+            [
+              547,
+              832
+            ]
+          ],
+          "distance": 262.28198369649084,
+          "tempMin": 13.622552557647058,
+          "tempMax": 17.293755221719454,
+          "tempMean": 15.806414097572073
+        },
+        {
+          "type": "area",
+          "polygon": [
+            [
+              965,
+              283
+            ],
+            [
+              889,
+              499
+            ],
+            [
+              1099,
+              606
+            ],
+            [
+              1163,
+              268
+            ]
+          ],
+          "area": 59728,
+          "tempMin": 6.498344757894737,
+          "tempMax": 17.169256579579397,
+          "tempMean": 11.959651489502253
+        }
+      ]
+    },
+    "2025-04-26-13-52-53-a3e1a.jpg": {
+      "image": "2025-04-26-13-52-53-a3e1a.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 16.4,
+          "max": 23.2,
+          "v1c": 18964,
+          "v1e": 18532
+        },
+        "temp_measured": {
+          "min": 16.4,
+          "max": 21.2,
+          "rawMin": 15433,
+          "rawMax": 22601
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.31,
+        "max": 31.7,
+        "mean": 9.23,
+        "std": 5.59,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    },
+    "2025-04-26-14-03-35-8c600.jpg": {
+      "image": "2025-04-26-14-03-35-8c600.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 17.1,
+          "max": 25.9,
+          "v1c": 19136,
+          "v1e": 18572
+        },
+        "temp_measured": {
+          "min": 17.1,
+          "max": 25.9,
+          "rawMin": 15433,
+          "rawMax": 25674
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.3,
+        "max": 31.7,
+        "mean": 11.95,
+        "std": 6.78,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    },
+    "2025-04-26-14-04-20-655d8.jpg": {
+      "image": "2025-04-26-14-04-20-655d8.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 17.8,
+          "max": 33,
+          "v1c": 19592,
+          "v1e": 18616
+        },
+        "temp_measured": {
+          "min": 17.8,
+          "max": 33,
+          "rawMin": 15433,
+          "rawMax": 25673
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.31,
+        "max": 31.7,
+        "mean": 7.83,
+        "std": 5.33,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    },
+    "2025-04-26-14-01-48-36ff0.jpg": {
+      "image": "2025-04-26-14-01-48-36ff0.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 14.6,
+          "max": 25,
+          "v1c": 19084,
+          "v1e": 18416
+        },
+        "temp_measured": {
+          "min": 14.6,
+          "max": 25,
+          "rawMin": 15432,
+          "rawMax": 25672
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.3,
+        "max": 31.7,
+        "mean": 4.67,
+        "std": 2.55,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    },
+    "2025-04-26-14-10-27-259d0.jpg": {
+      "image": "2025-04-26-14-10-27-259d0.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 16,
+          "max": 27.7,
+          "v1c": 19256,
+          "v1e": 18508
+        },
+        "temp_measured": {
+          "min": 17.2,
+          "max": 27.7,
+          "rawMin": 16458,
+          "rawMax": 25673
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.31,
+        "max": 31.7,
+        "mean": 20.27,
+        "std": 2.9,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    },
+    "2025-04-26-14-08-48-eb2a5.jpg": {
+      "image": "2025-04-26-14-08-48-eb2a5.jpg",
+      "width": 1412,
+      "height": 1059,
+      "device": {
+        "detected": true,
+        "brand": "Noyafa",
+        "model": "NF-521",
+        "has_exif": false,
+        "temp_range_camera": {
+          "min": 13.6,
+          "max": 34.5,
+          "v1c": 19692,
+          "v1e": 18352
+        },
+        "temp_measured": {
+          "min": 13.6,
+          "max": 34.5,
+          "rawMin": 15433,
+          "rawMax": 25673
+        },
+        "error": null
+      },
+      "temp_stats": {
+        "min": 2.31,
+        "max": 31.7,
+        "mean": 8.56,
+        "std": 5.2,
+        "included_percent": "100.0"
+      },
+      "zones": [],
+      "measurements": []
+    }
+  }
+}

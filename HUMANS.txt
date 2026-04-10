@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Olivier Ruiz
+Site: https://antworld.org
+GitHub: https://github.com/Tanngrisnirr
+Location: France
+
+/* TOOLS */
+IDE: Various
+Languages: Python, JavaScript, HTML, CSS
+Developed with the help of Claude Code
