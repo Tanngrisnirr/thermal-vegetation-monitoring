@@ -39,6 +39,7 @@ Thumbs.db
 
 # Project specific
 *.csv
+*.mp4
 !examples/sample_data/*.csv
 data/
 output/
@@ -46,3 +47,6 @@ output/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Local scripts (not tracked)
+remove_ai_attribution.sh

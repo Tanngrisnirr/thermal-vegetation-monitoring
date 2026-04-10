@@ -2,7 +2,7 @@
 
 A Python toolkit and web application for analyzing thermal images of vegetation with polygon-based region exclusion and time series analysis. Includes calibrated support for Noyafa NF-521 thermal cameras.
 
-![Thermal Zone Editor Screenshot](docs/screenshot.png)
+![Thermal Zone Editor Screenshot](img/Capture_ThermalVegetationMonitoring.png)
 
 ## Features
 
@@ -96,9 +96,13 @@ thermal-vegetation-monitoring/
 │   ├── zones.py                # Polygon zone management
 │   ├── stats.py                # Statistical analysis
 │   └── timeseries.py           # Time series analysis
-├── docs/
-│   └── NOYAFA_THERMAL_FORMAT.md  # Noyafa binary format documentation
-├── tests/                      # Test data and exports
+├── Devices/                    # Camera documentation and calibration data
+│   ├── Nofaya_NF-512/          # Noyafa NF-521 format documentation
+│   ├── Fluke_Ti480_IRCamera/   # Fluke camera info
+│   └── Stemmer/                # Stemmer imaging info
+├── exports/                    # Example JSON/CSV exports
+├── img/                        # Screenshots and images
+├── IR-img/                     # Sample thermal images
 ├── README.md
 ├── NOTES_PROJET.md             # Development notes (French)
 ├── HUMANS.txt
@@ -135,7 +139,7 @@ temp_min = 0.015772 × v1e - 275.86
 temp_C = temp_min + (raw - 15432) / (25674 - 15432) × (temp_max - temp_min)
 ```
 
-See `docs/NOYAFA_THERMAL_FORMAT.md` for complete binary format documentation.
+See `Devices/Nofaya_NF-512/NOYAFA_THERMAL_FORMAT.md` for complete binary format documentation.
 
 ## License
 
