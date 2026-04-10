@@ -1,0 +1,61 @@
+{
+  "exported_at": "2026-04-08T17:07:55.503Z",
+  "temp_range": {
+    "min": 15,
+    "max": 40
+  },
+  "images": {
+    "2025-04-26-13-47-21-d757f.jpg": {
+      "image": "2025-04-26-13-47-21-d757f.jpg",
+      "width": 1412,
+      "height": 1059,
+      "temp_stats": {
+        "min": 15,
+        "max": 40,
+        "mean": 19.07,
+        "std": 3.44,
+        "included_percent": "100.0"
+      },
+      "zones": []
+    },
+    "2025-04-26-13-51-36-67029.jpg": {
+      "image": "2025-04-26-13-51-36-67029.jpg",
+      "width": 1412,
+      "height": 1059,
+      "temp_stats": {
+        "min": 15,
+        "max": 40,
+        "mean": 25.25,
+        "std": 5.43,
+        "included_percent": "100.0"
+      },
+      "zones": []
+    },
+    "2025-04-26-13-52-53-a3e1a.jpg": {
+      "image": "2025-04-26-13-52-53-a3e1a.jpg",
+      "width": 1412,
+      "height": 1059,
+      "temp_stats": {
+        "min": 15.01,
+        "max": 40,
+        "mean": 20.9,
+        "std": 4.75,
+        "included_percent": "100.0"
+      },
+      "zones": []
+    },
+    "2025-04-26-14-00-02-2f54c.jpg": {
+      "image": "2025-04-26-14-00-02-2f54c.jpg",
+      "width": 1412,
+      "height": 1059,
+      "temp_stats": {
+        "min": 15,
+        "max": 40,
+        "mean": 24.47,
+        "std": 3.61,
+        "included_percent": "100.0"
+      },
+      "zones": []
+    }
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermal Zone Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <!-- T -->
+            <span class="pixel-letter"><span class="p p1"></span><span class="p p1"></span><span class="p p1"></span><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span></span>
+            <!-- H -->
+            <span class="pixel-letter"><span class="p p2"></span><span class="p p0"></span><span class="p p2"></span><span class="p p2"></span><span class="p p0"></span><span class="p p2"></span><span class="p p2"></span><span class="p p2"></span><span class="p p2"></span><span class="p p2"></span><span class="p p0"></span><span class="p p2"></span><span class="p p2"></span><span class="p p0"></span><span class="p p2"></span></span>
+            <!-- E -->
+            <span class="pixel-letter"><span class="p p3"></span><span class="p p3"></span><span class="p p3"></span><span class="p p3"></span><span class="p p0"></span><span class="p p0"></span><span class="p p3"></span><span class="p p3"></span><span class="p p0"></span><span class="p p3"></span><span class="p p0"></span><span class="p p0"></span><span class="p p3"></span><span class="p p3"></span><span class="p p3"></span></span>
+            <!-- R -->
+            <span class="pixel-letter"><span class="p p4"></span><span class="p p4"></span><span class="p p0"></span><span class="p p4"></span><span class="p p0"></span><span class="p p4"></span><span class="p p4"></span><span class="p p4"></span><span class="p p0"></span><span class="p p4"></span><span class="p p0"></span><span class="p p4"></span><span class="p p4"></span><span class="p p0"></span><span class="p p4"></span></span>
+            <!-- M -->
+            <span class="pixel-letter"><span class="p p5"></span><span class="p p0"></span><span class="p p5"></span><span class="p p5"></span><span class="p p5"></span><span class="p p5"></span><span class="p p5"></span><span class="p p0"></span><span class="p p5"></span><span class="p p5"></span><span class="p p0"></span><span class="p p5"></span><span class="p p5"></span><span class="p p0"></span><span class="p p5"></span></span>
+            <!-- A -->
+            <span class="pixel-letter"><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span><span class="p p1"></span><span class="p p0"></span><span class="p p1"></span><span class="p p1"></span><span class="p p1"></span><span class="p p1"></span><span class="p p1"></span><span class="p p0"></span><span class="p p1"></span><span class="p p1"></span><span class="p p0"></span><span class="p p1"></span></span>
+            <!-- L -->
+            <span class="pixel-letter"><span class="p p2"></span><span class="p p0"></span><span class="p p0"></span><span class="p p2"></span><span class="p p0"></span><span class="p p0"></span><span class="p p2"></span><span class="p p0"></span><span class="p p0"></span><span class="p p2"></span><span class="p p0"></span><span class="p p0"></span><span class="p p2"></span><span class="p p2"></span><span class="p p2"></span></span>
+        </h1>
+        <div class="header-controls">
+            <div class="btn-group">
+                <label class="file-btn" data-tip="tip_load">
+                    <span data-i18n="load">Load</span>
+                    <input type="file" id="imageInput" accept="image/*" multiple>
+                </label>
+                <label class="file-btn" data-tip="tip_import">
+                    <span data-i18n="import_btn">Import</span>
+                    <input type="file" id="importInput" accept=".json,.csv">
+                </label>
+            </div>
+            <div class="temp-range">
+                <span data-i18n="range">Range:</span>
+                <input type="number" id="tempMin" value="15" step="1" data-tip="tip_min_temp"> -
+                <input type="number" id="tempMax" value="40" step="1" data-tip="tip_max_temp"> °C
+            </div>
+            <div class="zoom-controls">
+                <button id="zoomOutBtn" data-tip="tip_zoom_out">-</button>
+                <span id="zoomLevel">100%</span>
+                <button id="zoomInBtn" data-tip="tip_zoom_in">+</button>
+                <button id="zoomFitBtn" data-tip="tip_zoom_fit">Fit</button>
+            </div>
+            <div class="btn-group">
+                <button id="undoBtn" data-tip="tip_undo" disabled data-i18n="undo">Undo</button>
+                <button id="redoBtn" data-tip="tip_redo" disabled data-i18n="redo">Redo</button>
+            </div>
+            <div class="btn-group">
+                <button id="exportJsonBtn" data-tip="tip_json">JSON</button>
+                <button id="exportCsvBtn" data-tip="tip_csv">CSV</button>
+            </div>
+            <button id="helpBtn" data-tip="tip_help">?</button>
+            <button id="clearBtn" data-tip="tip_clear" data-i18n="clear">Clear</button>
+            <div class="lang-flags">
+                <div class="lang-flag flag-en" data-lang="en" title="English"></div>
+                <div class="lang-flag flag-fr" data-lang="fr" title="Francais"></div>
+                <div class="lang-flag flag-pl" data-lang="pl" title="Polski"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="panel thumbnail-panel">
+            <h3 data-i18n="images">Images</h3>
+            <div id="thumbnailList"></div>
+            <div class="thumbnail-actions">
+                <button id="deleteImagesBtn" data-tip="tip_delete_img" style="background:#c0392b;">X</button>
+                <button id="selectAllImagesBtn" data-tip="tip_select_all">All</button>
+                <button id="deselectAllImagesBtn" data-tip="tip_deselect_all">-</button>
+            </div>
+        </aside>
+        <section class="panel editor-panel">
+            <div class="toolbar">
+                <div class="tool-group">
+                    <label data-tip="tip_select"><input type="radio" name="tool" value="select" checked><span class="tool-icon">^</span><span class="tool-label" data-i18n="select">Select</span></label>
+                    <label data-tip="tip_exclusion"><input type="radio" name="tool" value="polygon"><span class="tool-icon">#</span><span class="tool-label" data-i18n="exclusion">Exclusion</span></label>
+                    <label data-tip="tip_edit"><input type="radio" name="tool" value="edit"><span class="tool-icon">+</span><span class="tool-label" data-i18n="edit">Edit</span></label>
+                </div>
+                <div class="tool-group">
+                    <label data-tip="tip_point"><input type="radio" name="tool" value="point"><span class="tool-icon">.</span><span class="tool-label" data-i18n="point">Point</span></label>
+                    <label data-tip="tip_line"><input type="radio" name="tool" value="line"><span class="tool-icon">/</span><span class="tool-label" data-i18n="line">Line</span></label>
+                    <label data-tip="tip_area"><input type="radio" name="tool" value="area"><span class="tool-icon">@</span><span class="tool-label" data-i18n="area">Area</span></label>
+                </div>
+                <span class="tool-hint" id="toolHint"></span>
+            </div>
+            <div class="canvas-container" id="canvasContainer">
+                <canvas id="mainCanvas" width="800" height="600"></canvas>
+                <div id="cursorInfo"><span class="coords">X: - Y: -</span> | <span class="temp">-- °C</span></div>
+            </div>
+            <div class="bottom-panels">
+                <div class="histogram-panel">
+                    <canvas id="histogramCanvas" width="300" height="60"></canvas>
+                    <div id="histogramInfo">Hover histogram for details</div>
+                </div>
+                <div class="stats-panel">
+                    <h4>Statistics</h4>
+                    <div id="imageStats">Load an image to see statistics</div>
+                </div>
+            </div>
+        </section>
+        <aside class="panel zones-panel">
+            <h3>Exclusion Zones</h3>
+            <div id="zonesList"></div>
+            <div class="measurements-section">
+                <h4>Measurements</h4>
+                <div id="measurementsList"></div>
+            </div>
+        </aside>
+    </main>
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal">
+            <h2>Keyboard Shortcuts</h2>
+            <table>
+                <tr><th>Key</th><th>Action</th></tr>
+                <tr><td><kbd>1</kbd></td><td data-i18n="help_select">Select/Delete tool</td></tr>
+                <tr><td><kbd>2</kbd></td><td data-i18n="help_exclusion">Exclusion zone tool</td></tr>
+                <tr><td><kbd>3</kbd></td><td data-i18n="help_edit">Edit vertices tool</td></tr>
+                <tr><td><kbd>4</kbd></td><td>Point measurement</td></tr>
+                <tr><td><kbd>5</kbd></td><td>Line measurement</td></tr>
+                <tr><td><kbd>6</kbd></td><td>Area measurement</td></tr>
+                <tr><td><kbd>Delete</kbd></td><td>Delete selected zone</td></tr>
+                <tr><td><kbd>Escape</kbd></td><td>Cancel current operation</td></tr>
+                <tr><td><kbd>Ctrl+Z</kbd></td><td>Undo</td></tr>
+                <tr><td><kbd>Ctrl+Y</kbd></td><td>Redo</td></tr>
+                <tr><td><kbd>Ctrl+S</kbd></td><td>Export JSON</td></tr>
+                <tr><td><kbd>Ctrl+O</kbd></td><td>Load images</td></tr>
+                <tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>Zoom in/out</td></tr>
+                <tr><td><kbd>0</kbd></td><td>Fit to view</td></tr>
+                <tr><td><kbd>Space+Drag</kbd></td><td>Pan view</td></tr>
+                <tr><td><kbd>Scroll</kbd></td><td>Zoom at cursor</td></tr>
+                <tr><td><kbd>?</kbd></td><td>Show this help</td></tr>
+            </table>
+            <button class="close-btn" onclick="document.getElementById('helpModal').classList.remove('show')">Close</button>
+        </div>
+    </div>
+    <script src="palettes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
